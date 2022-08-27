@@ -83,7 +83,7 @@ https://park-seaweed.notion.site/5-1c6f8b5caf1741979939521d9b415a03
 * [ ] 소셜 로그인, 무한 스크롤 기능 확인해보지 못한 점
 * [ ] Backend에서 postman을 통해 데이터를 확인했더라도 프론트 console에서 에러가 나는 것은 결국 Backend의 데이터 전달과정에서  
 문제가 있을 가능성이 크다는 것을 느낌 
-
+테스트
 
 <br/>
 <br/>
