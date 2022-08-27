@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    username: john721
+    url: jdbc:mysql://database-1.cjqsacqcnhg0.ap-northeast-2.rds.amazonaws.com:3306/testdb222
+
+    password: mm99035386
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+
+
+
+jwt:
+  secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK
+
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
+    credentials:
+      accessKey: AKIARWUFJKBUUIVUERHF
+      secretKey: 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
+
+    s3:
+
+      bucket: myclonebucket
