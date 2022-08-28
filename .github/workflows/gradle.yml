@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env: # 새로 추가한 부분
-  S3_BUCKET_NAME: logging-system-deploy
+  S3_BUCKET_NAME: springboot-webservice-deployd
   PROJECT_NAME: playground-logging
 
 jobs:
@@ -27,6 +27,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
         shell: bash
+      
       - name: Make zip file
         run: zip -r ./$GITHUB_SHA.zip .
         shell: bash
