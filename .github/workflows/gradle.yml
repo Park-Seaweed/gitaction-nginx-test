@@ -5,7 +5,7 @@ on:
 
 env: # 새로 추가한 부분
   S3_BUCKET_NAME: springboot-webservice-deployd
-  PROJECT_NAME: playground-logging
+  PROJECT_NAME: gitaction-nginx-test
 
 jobs:
   build:
