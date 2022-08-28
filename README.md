@@ -3,7 +3,6 @@
 
 Spring Boot + React를 사용한 클론 코딩 프로젝트
 <!-- [**[트리스티의 SpringBoot + React를 사용한 클론 코딩 프로젝트에 오신 여러분을 환영합니다!]**]  -->
-[![Build Status](https://app.travis-ci.com/Park-Seaweed/travis-test.svg?branch=master)](https://app.travis-ci.com/Park-Seaweed/travis-test)
 <br/>
 
 
