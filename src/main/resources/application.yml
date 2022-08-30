@@ -27,3 +27,7 @@ cloud:
     s3:
 
       bucket: myclonebucket
+
+logging:
+  module:
+    version: 0.0.1
