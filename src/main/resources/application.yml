@@ -21,12 +21,12 @@ cloud:
     region:
       static: ap-northeast-2
     credentials:
-      accessKey: AKIARWUFJKBUUIVUERHF
-      secretKey: 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
+      accessKey: AKIATHMOO6RTRQ4HNJ7X
+      secretKey: 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
 
     s3:
 
-      bucket: myclonebucket
+      bucket: springboot-webservice-deploy
 
 logging:
   module:
