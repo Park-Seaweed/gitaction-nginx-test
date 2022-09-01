@@ -75,7 +75,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 
-                .antMatchers("/","/health","/test","/api/signup", "/api/login", "/api/reissue","/h2-console/**", "/login/**", "/js/**", "/css/**", "/image/**", "/fonts/**", "/favicon.ico",
+                .antMatchers("/","/api/health","/test","/api/signup", "/api/login", "/api/reissue","/h2-console/**", "/login/**", "/js/**", "/css/**", "/image/**", "/fonts/**", "/favicon.ico",
                         "/api/boards/**","/api/board/**","/api/users").permitAll()
 
                 // TODO: 마이페이지 만들 때 혹시 추가 할 수 있는 유저정보 CRUD
