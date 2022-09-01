@@ -28,6 +28,3 @@ cloud:
 
       bucket: springboot-webservice-deploy
 
-logging:
-  module:
-    version: 0.0.1
