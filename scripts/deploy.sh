@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPOSITORY=/home/ec2-user
+REPOSITORY=/home/ec2-user/step
 PROJECT_NAME=test_deploy
 
 echo "> Build 파일 복사"
