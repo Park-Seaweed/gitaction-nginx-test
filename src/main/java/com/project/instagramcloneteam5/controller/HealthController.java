@@ -22,7 +22,7 @@ public class HealthController {
     @GetMapping("/health")
 
     public ResponseEntity<String> healthcheck(){
-        return ResponseEntity.ok("진짜해봐");
+        return ResponseEntity.ok("why????please");
     }
 
 
