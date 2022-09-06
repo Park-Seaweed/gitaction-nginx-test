@@ -3,7 +3,7 @@
 REPOSITORY=/home/ec2-user/test-deploy
 cd $REPOSITORY
 
-APP_NAME=gitaction-nginx-test
+APP_NAME=instagram-clone-team5
 JAR_NAME=$(ls $REPOSITORY/build/libs/ | grep '.jar' | tail -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
 
