@@ -4,7 +4,8 @@ import com.project.instagramcloneteam5.controller.HealthController;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.env.MockEnvironment;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class ProfileControllerTest {
     @Test
