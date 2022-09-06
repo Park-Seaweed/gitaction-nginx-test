@@ -76,7 +76,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
 
                 .antMatchers("/","/api/health","/test","/api/signup", "/api/login", "/api/reissue","/h2-console/**", "/login/**", "/js/**", "/css/**", "/image/**", "/fonts/**", "/favicon.ico",
-                        "/api/boards/**","/api/board/**","/api/users").permitAll()
+                        "/api/boards/**","/api/board/**","/api/users","/api/profile").permitAll()
 
                 // TODO: 마이페이지 만들 때 혹시 추가 할 수 있는 유저정보 CRUD
                 .antMatchers(HttpMethod.GET, "/api/users").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")

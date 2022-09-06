@@ -169,7 +169,10 @@ public class BoardService {
 
         // 본인의 게시글만 삭제 가능
         //TODO: 필수확인 구조 이상함
-
+        /*
+        *
+        *
+        * */
         if (!board.getMember().equals(member)) {
             System.out.println("이름1 = " + board.getMember() + "이름2 = " + member);
             throw new PrivateException(Code.WRONG_ACCESS_POST_DELETE);

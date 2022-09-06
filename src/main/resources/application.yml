@@ -1,12 +1,12 @@
 spring:
   datasource:
-    username: john721
-    url: jdbc:mysql://database-1.cjqsacqcnhg0.ap-northeast-2.rds.amazonaws.com:3306/testdb222
+    username: admin
+    url: jdbc:mysql://database-1.cy6dpdsrdbon.ap-northeast-2.rds.amazonaws.com:3306/perdayonespoon
 
-    password: mm99035386
+    password: admin1212
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     generate-ddl: true
 
 
@@ -21,7 +21,7 @@ cloud:
     region:
       static: ap-northeast-2
     credentials:
-      accessKey: AKIATHMOO6RTRQ4HNJ7X
+      accessKey: 7OsHFwFI4K218gXQ+GKLzDaeke75U5kbvzOxkXDv8UQ=
       secretKey: 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
 
     s3:
