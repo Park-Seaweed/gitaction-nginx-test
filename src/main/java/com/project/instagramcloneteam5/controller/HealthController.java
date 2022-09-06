@@ -20,7 +20,7 @@ public class HealthController {
 
     @GetMapping("/health")
     public String healthcheck(){
-        return "ok";
+        return "진짜야??";
     }
 
 
