@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/test-deploy
+    destination: /home/ec2-user/test-deploy/tes
     overwrite: yes
 
 permissions:
@@ -13,7 +13,7 @@ permissions:
 
 hooks:
   ApplicationStart:
-    - location: deploy.sh
+    - location: scripts/deploy.sh
       timeout: 180
       runas: ec2-user
 #    - location: scripts/run_new_was.sh
