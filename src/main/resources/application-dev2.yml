@@ -1,3 +1,5 @@
+server:
+  port: 8082
 spring:
   datasource:
     username: john721
@@ -8,9 +10,6 @@ spring:
     hibernate:
       ddl-auto: update
     generate-ddl: true
-
-
-
 jwt:
   secret: c3ByaW5nLWJvb3Qtc2VjdXJpdHktand0LXR1dG9yaWFsLWppd29vbi1zcHJpbmctYm9vdC1zZWN1cml0eS1qd3QtdHV0b3JpYWwK
 
@@ -27,4 +26,3 @@ cloud:
     s3:
 
       bucket: springboot-webservice-deploy
-
