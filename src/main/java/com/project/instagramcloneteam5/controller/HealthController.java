@@ -2,6 +2,7 @@ package com.project.instagramcloneteam5.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,8 +20,9 @@ public class HealthController {
 
 
     @GetMapping("/health")
-    public String healthcheck(){
-        return "really?";
+
+    public ResponseEntity<String> healthcheck(){
+        return ResponseEntity.ok("진짜해봐");
     }
 
 
