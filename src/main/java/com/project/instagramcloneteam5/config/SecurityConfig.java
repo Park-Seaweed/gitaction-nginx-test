@@ -75,8 +75,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 
-                .antMatchers("/","/api/health","/test","/api/signup", "/api/login", "/api/reissue","/h2-console/**", "/login/**", "/js/**", "/css/**", "/image/**", "/fonts/**", "/favicon.ico",
-                        "/api/boards/**","/api/board/**","/api/users","/api/profile").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/health").permitAll()
+                .antMatchers(PERMIT_URL_ARRAY).permitAll()
+                // 위에 처러
 
                 // TODO: 마이페이지 만들 때 혹시 추가 할 수 있는 유저정보 CRUD
                 .antMatchers(HttpMethod.GET, "/api/users").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
@@ -85,7 +86,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.PUT, "/api/user/{id}").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
                 .antMatchers(HttpMethod.DELETE, "/api/user/{id}").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
 
-                .antMatchers(HttpMethod.GET, "/api/health").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+
                 .antMatchers(HttpMethod.GET, "/").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
                 .antMatchers(HttpMethod.POST, "/").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
                 .antMatchers(HttpMethod.DELETE, "/").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
@@ -122,4 +123,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .apply(new JwtSecurityConfig(tokenProvider));
         }
+
+    private static final String[] PERMIT_URL_ARRAY = {
+            /* swagger v2 */
+            "/","/test","/api/signup", "/api/login", "/api/reissue","/h2-console/**", "/login/**", "/js/**", "/css/**", "/image/**", "/fonts/**", "/favicon.ico",
+            "/api/boards/**","/api/board/**","/api/users","/api/profile"
+    };
 }

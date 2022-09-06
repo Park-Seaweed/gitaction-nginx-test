@@ -17,10 +17,7 @@ public class HealthController {
     private final Environment env;
 
 
-
-
     @GetMapping("/health")
-
     public ResponseEntity<String> healthcheck(){
         return ResponseEntity.ok("why????please");
     }
