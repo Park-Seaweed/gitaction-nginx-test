@@ -1,9 +1,9 @@
 spring:
   datasource:
-    username: admin
-    url: jdbc:mysql://database-1.cy6dpdsrdbon.ap-northeast-2.rds.amazonaws.com:3306/perdayonespoon
+    username: john721
+    url: jdbc:mysql://database-1.cjqsacqcnhg0.ap-northeast-2.rds.amazonaws.com:3306/testdb222
 
-    password: admin1212
+    password: mm99035386
   jpa:
     hibernate:
       ddl-auto: create-drop
