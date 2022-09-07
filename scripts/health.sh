@@ -1,3 +1,4 @@
+#!/bin/bash
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
 source ${ABSDIR}/profile.sh
@@ -25,7 +26,7 @@ do
     echo "> Health Check: ${RESPONSE}"
   fi
 
-  if [ ${RETRY_COUNT} -eq 10 ]
+  if [ ${RETRY_COUNT} == 10 ]
   then
     echo "> Health Check실패"
     echo "> Nginx 에 연결하지 않고 배포를 종료"
