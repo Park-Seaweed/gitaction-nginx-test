@@ -9,7 +9,7 @@ REPOSITORY=/home/ec2-user/test-deploy
 echo "Build 파일 복사"
 echo "> cp $REPOSITORY/build/libs/*.jar $REPOSITORY/"
 
-cp $REPOSITORY/build/libs/*.jar $REPOSITORY/
+#cp $REPOSITORY/build/libs/*.jar $REPOSITORY/
 
 echo "> 새 어플리케이션 배포"
 JAR_NAME=$(ls -tr $REPOSITORY/build/libs/*.jar | tail -n 1)
