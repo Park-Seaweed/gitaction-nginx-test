@@ -12,7 +12,7 @@ echo "> cp $REPOSITORY/build/libs/*.jar $REPOSITORY/"
 cp $REPOSITORY/build/libs/*.jar $REPOSITORY/
 
 echo "> 새 어플리케이션 배포"
-JAR_NAME=$(ls -tr $REPOSITORY/build/libs/ | grep '.jar' | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/build/libs/*.jar | tail -n 1)
 
 echo "> JAR Name: $JAR_NAME"
 
@@ -25,7 +25,4 @@ echo "> $JAR_NAME 실행"
 IDLE_PROFILE=$(find_idle_profile)
 
 echo "> $JAR_NAME 을 profile=$IDLE_PROFILE 로 실행합니다"
-nohup java -jar \
-  -Dspring.config.location=classpath:/appclication.yml,classpath:/appclication-$IDLE_PROFILE.yml \
-  -Dspring.profiles.actvie=$IDLE_PROFILE \
-  $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+nohup java -jar \-Dspring.config.location=classpath:/appclication.yml,classpath:/appclication-$IDLE_PROFILE.yml\-Dspring.profiles.actvie=$IDLE_PROFILE\$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
