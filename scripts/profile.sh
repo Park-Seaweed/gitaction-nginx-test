@@ -10,7 +10,7 @@ function find_idle_profile() {
       CURRENT_PROFILE="$(curl -s http://localhost/api/profile)"
     fi
 
-    if [ ${CURRENT_PROFILE} == real1 ];
+    if [[ ${CURRENT_PROFILE} -eq real1 ]];
     then
       IDLE_PROFILE="real2"
     else
