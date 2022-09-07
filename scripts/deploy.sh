@@ -7,7 +7,7 @@ APP_NAME=instagram-clone-team5
 JAR_NAME=$(ls $REPOSITORY/build/libs/ | grep '.jar' | tail -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
 
-CURRENT_PID=$(pgrep -f $APP_NAME)
+CURRENT_PID=$(grep -f $APP_NAME)
 
 if [ -z $CURRENT_PID ]
 then
