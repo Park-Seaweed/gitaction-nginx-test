@@ -22,12 +22,7 @@ hooks:
     - location: scripts/health.sh
       timeout: 60
       runas: ec2-user
-    - location: scripts/profile.sh
-      timeout: 60
-      runas: ec2-user
-    - location: scripst/switch.sh
-      timeout: 60
-      runas: ec2-user
+
 #  ApplicationStart:
 #    - location: scripts/deploy.sh
 #      timeout: 60
