@@ -13,7 +13,7 @@ function switch_proxy() {
 
     echo "> Nginx Reload"
 
-    sudo nginx -s reload
+    sudo service nginx reload
 }
 #
 #CURRENT_PORT=$(cat /home/ec2-user/service_url.inc | grep -Po '[0-9]' | tail -1)
