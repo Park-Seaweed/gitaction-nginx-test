@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/test-deploy
+    destination: /home/ec2-user/app/step3/zip/
     overwrite: yes
 
 permissions:
@@ -13,17 +13,17 @@ permissions:
 
 hooks:
   AfterInstall:
-    - location: scripts/stop.sh
+    - location: stop.sh
       timeout: 60
-      runas: ec2-user
+      runas: root
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: start.sh
       timeout: 60
-      runas: ec2-user
+      runas: root
   ValidateService:
-    - location: scripts/health.sh
+    - location: health.sh
       timeout: 60
-      runas: ec2-user
+      runas: root
 
 #  ApplicationStart:
 #    - location: scripts/deploy.sh

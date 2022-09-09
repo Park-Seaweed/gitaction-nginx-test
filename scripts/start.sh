@@ -1,18 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
-source ${ABSDIR}/profile.sh
+source ${ABSDIR}/profile.sh   # import profile.sh
 
-REPOSITORY=/home/ec2-user/test-deploy
+REPOSITORY=/home/ec2-user/app/step3
 
-echo "Build 파일 복사"
-echo "> cp $REPOSITORY/build/libs/*.jar $REPOSITORY/"
+echo "> Build 파일 복사"
+echo "> cp $REPOSITORY/zip/*.jar $REPOSITORY/"
 
-#cp $REPOSITORY/build/libs/*.jar $REPOSITORY/
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 새 어플리케이션 배포"
-JAR_NAME=$(ls -tr $REPOSITORY/build/libs/*.jar | tail -n 1)
+JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)    # jar 이름 꺼내오기
 
 echo "> JAR Name: $JAR_NAME"
 
@@ -24,8 +24,7 @@ echo "> $JAR_NAME 실행"
 
 IDLE_PROFILE=$(find_idle_profile)
 
-echo "> $JAR_NAME 을 profile=$IDLE_PROFILE 로 실행합니다"
+echo "> $JAR_NAME 를 profile=$IDLE_PROFILE 로 실행합니다."
 nohup java -jar \
--Dspring.config.location=classpath:/appclication.yml,classpath:/appclication-$IDLE_PROFILE.yml \
--Dspring.profiles.actvie=$IDLE_PROFILE \
-$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+    -Dspring.profiles.active=$IDLE_PROFILE \   # 위에서 보았던 것처럼 $IDLE_PROFILE에는 real1 or real2가 반환되는데 반환되는 properties를 실행한다는 뜻입니다.
+    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &

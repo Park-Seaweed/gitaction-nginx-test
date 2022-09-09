@@ -25,11 +25,15 @@ public class HealthController {
 
 
 
-    @GetMapping("/profile")
-    public String profile() {
-        List<String> profiles = Arrays.asList(env.getActiveProfiles());
-        List<String> realProfiles =Arrays.asList("real1", "real2");
-        String defaultProfile = profiles.isEmpty() ? "default" : profiles.get(0);
-        return profiles.stream().filter(realProfiles::contains).findAny().orElse(defaultProfile);
+    @GetMapping("/")
+    public String gyunny() {
+        List<String> profile = Arrays.asList(env.getActiveProfiles());
+        List<String> realProfiles = Arrays.asList("real1", "real2");
+        String defaultProfile = profile.isEmpty() ? "default" : profile.get(0);
+
+        return profile.stream()
+                .filter(realProfiles::contains)
+                .findAny()
+                .orElse(defaultProfile);
     }
 }
