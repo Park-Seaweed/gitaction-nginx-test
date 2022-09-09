@@ -11,7 +11,7 @@ function find_idle_profile()
         CURRENT_PROFILE=$(sudo curl -s http://3.35.218.108/)
     fi
 
-    if [[ ${CURRENT_PROFILE} == "real1" ]]
+    if [[ ${CURRENT_PROFILE} == real1 ]]
     then
       IDLE_PROFILE=real2
     else
@@ -25,7 +25,7 @@ function find_idle_port()
 {
     IDLE_PROFILE=$(find_idle_profile)
 
-    if [[ ${IDLE_PROFILE} == "real1" ]]
+    if [[ ${IDLE_PROFILE} == real1 ]]
     then
       echo "8081"   # 여기도 마찬가지로 return 기능의 느낌
     else
