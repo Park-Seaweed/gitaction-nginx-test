@@ -12,7 +12,7 @@ if [ -z ${IDLE_PID} ]
 then
   echo "> 현재 구동중인 애플리케이션이 없으므로 종료하지 않습니다."
 else
-  echo "> kill -15 $IDLE_PID"   # Nginx에 연결되어 있지는 않지만 현재 실행 중인 jar 를 Kill 합니다.
+  echo "> kill -15 $IDLE_PID"
   kill -15 ${IDLE_PID}
   sleep 5
 fi
