@@ -12,7 +12,7 @@ echo "> cp $REPOSITORY/zip/*.jar $REPOSITORY/"
 cp $REPOSITORY/zip/build/libs/*.jar $REPOSITORY/
 
 echo "> 새 어플리케이션 배포"
-JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)    # jar 이름 꺼내오기
+JAR_NAME=$(ls $REPOSITORY/*.jar | tail -n 1)    # jar 이름 꺼내오기
 
 echo "> JAR Name: $JAR_NAME"
 
