@@ -15,7 +15,7 @@ sleep 10
 
 for RETRY_COUNT in {1..10}  # for문 10번 돌기
 do
-  RESPONSE=$(sudo curl -s http://127.0.0.1:${IDLE_PORT})
+  RESPONSE=$(sudo curl -s http://127.0.0.1:${IDLE_PORT}/api/profile)
   UP_COUNT=$(echo ${RESPONSE} | grep "real" | wc -l)
 
 
