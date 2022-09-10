@@ -6,7 +6,7 @@ source ${ABSDIR}/profile.sh
 source ${ABSDIR}/switch.sh
 
 IDLE_PORT=$(find_idle_port)
-HEALTH_CK=$(switch_proxy)
+
 
 echo "> Health Check Start!"
 echo "> IDLE_PORT: $IDLE_PORT"
@@ -17,6 +17,7 @@ for RETRY_COUNT in {1..10}  # for문 10번 돌기
 do
   RESPONSE=$(sudo curl -s http://127.0.0.1:${IDLE_PORT})
   UP_COUNT=$(echo ${RESPONSE} | grep "real" | wc -l)
+  HEALTH_CK=$(switch_proxy)
 
   if [ ${UP_COUNT} -ge 1 ]
   then # $up_count >= 1 ("real" 문자열이 있는지 검증)
