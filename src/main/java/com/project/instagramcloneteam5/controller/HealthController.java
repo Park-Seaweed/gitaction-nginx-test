@@ -19,7 +19,7 @@ public class HealthController {
 
     @GetMapping("/health")
     public ResponseEntity<String> healthcheck(){
-        return ResponseEntity.ok("Fucking");
+        return ResponseEntity.ok("Please");
     }
 
 
