@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
 source ${ABSDIR}/profile.sh
@@ -15,7 +14,7 @@ sleep 10
 
 for RETRY_COUNT in {1..10}  # for문 10번 돌기
 do
-  RESPONSE=$(sudo curl -s http://127.0.0.1:${IDLE_PORT}/api/profile)
+  RESPONSE=$(sudo curl -s http://127.0.0.1:${IDLE_PORT})
   UP_COUNT=$(echo ${RESPONSE} | grep 'real' | wc -l)
 
 
