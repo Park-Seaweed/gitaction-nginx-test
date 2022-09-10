@@ -17,7 +17,7 @@ public class HealthController {
 
     @GetMapping("/health")
     public ResponseEntity<String> healthcheck(){
-        return ResponseEntity.ok("hahahahahahhaahhaahhaahahhaahahahahahahahahahahahhahahaahhaaahahhahahahhaaahaahahhaah");
+        return ResponseEntity.ok("PLEASE SUCCESS");
     }
 
 
