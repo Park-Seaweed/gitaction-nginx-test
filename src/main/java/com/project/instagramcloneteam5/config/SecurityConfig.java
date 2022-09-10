@@ -127,6 +127,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private static final String[] PERMIT_URL_ARRAY = {
             /* swagger v2 */
             "/","/test","/api/signup", "/api/login", "/api/reissue","/h2-console/**", "/login/**", "/js/**", "/css/**", "/image/**", "/fonts/**", "/favicon.ico",
-            "/api/boards/**","/api/board/**","/api/users","/api/profile","/api/health"
+            "/api/boards/**","/api/board/**","/api/users","/profile","/health"
     };
 }
